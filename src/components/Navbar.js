@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
+//import github from "../img/github-icon.svg";
+import instagram from "../img/social/instagram.svg";
 import logo from "../img/logo.svg";
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
     >
       <div className="container">
         <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
+          <Link to="/accueil" className="navbar-item" title="Logo">
             <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
           </Link>
           {/* Hamburger menu */}
@@ -33,40 +34,38 @@ const Navbar = () => {
                 to a ul for accessibilty purposes, would like to see a css
                 re-write that makes this unneccesary.
              */}
+
             <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/about">
-                About
+            <Link className="navbar-item" to="/gourmandises">
+              Gourmandises
+            </Link>
+            </li>
+
+            <li className="navbar-item" style={{padding: "0px"}}>
+              <Link className="navbar-item" to="/calendrier">
+                Calendrier de l'avent
               </Link>
             </li>
+
             <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/products">
-              Products
+            <Link className="navbar-item" to="/boutique">
+              La boutique
             </Link>
             </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/blog">
-              Blog
-            </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
-            </Link>
-            </li>
+
           <li className="navbar-end has-text-centered">
             <a
               className="navbar-item"
-              href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="icon">
-                <img src={github} alt="Github" />
+              <img
+                    src={instagram}
+                    alt="Instagram"
+                    style={{ width: "1em", height: "1em" }}
+                  />
               </span>
             </a>
           </li>
